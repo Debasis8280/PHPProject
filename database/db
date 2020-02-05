@@ -1,0 +1,127 @@
+
+Register
+--------
+create table users(
+	PROFILEID int auto_increment primary key, 
+    MATRIMONYPROFILEFOR varchar(20),
+	NAME varchar(50),
+	profile varchar(500),
+	EMAILID varchar(50),
+	DATEOFBIRTH varchar(20),
+	PASSWORD varchar(50),
+	GENDER varchar(10),
+	MOBILENO varchar(10),
+	RELIGION varchar(30),
+	MOTHERTONGUE varchar(20),
+	COUNTRYLIVINGIN varchar(30),
+	login_time varchar(30),
+	logout_time varchar(30)
+	);
+----------------------------------
+Religion Detail
+------------------
+	create table religion_detail
+    (
+        CAST varchar(30) default "Not Specified",
+        SUBCAST varchar(30) default "Not Specified",
+        GOTHRA varchar(30) default "Not Specified",
+        DOSH_No_YES_DONTKNOW varchar(15) default "Not Specified",
+        DOSH_YES_MANGLIK varchar(20) default "Not Specified",
+        DOSH_YES_SARPADOSH varchar(50) default "Not Specified",
+        DOSH_YES_KALASARAPSOSH varchar(50) default "Not Specified",
+        DOSH_YES_RAHUDOSH varchar(50) default "Not Specified",
+        DOSH_YES_KETHUDOSH varchar(50) default "Not Specified",
+        DOSH_YES_KALATHRADOSH varchar(50) default "Not Specified",
+        PROFILEID int,
+        FOREIGN KEY (PROFILEID) REFERENCES users(PROFILEID)
+		ON DELETE CASCADE
+        )
+----------------------------------------------
+PERSONAL DETAILS
+------------------
+create table personal_details
+(
+	MARITAL_STATUS varchar(50) default "Not Specified",
+	MARITAL_STATUS_NumberofChildren varchar(50) default "Not Specified",
+	MARITAL_STATUS_WITH_or_not varchar(100) default "Not Specified",
+	HEIGHT varchar(100) default "Not Specified",
+	AGE varchar(15) default "Not Specified",
+	FAMILY_STATUS varchar(70) default "Not Specified",
+	FAMILY_TYPE varchar(50) default "Not Specified",
+	FAMILY_VALUES varchar(50) default "Not Specified",
+	ANY_DISABILITY varchar(50) default "Not Specified",
+	PROFILEID int ,
+    FOREIGN KEY (PROFILEID) REFERENCES users(PROFILEID)
+	ON DELETE CASCADE
+);
+----------------------------------------------
+PROFESSIONAL DETAILS
+--------------------
+create table professional_details
+(
+	HIGHEST_EDUCATION varchar(200) default "Not Specified",
+	EMPLOYED_IN varchar(100) default "Not Specified",
+	OCCUPATION_STATUS varchar(200) default "Not Specified",
+	ANNUAL_INCOME varchar(100) default "Not Specified",
+	WORK_LOCATIONCOUNTRY varchar(100) default "Not Specified",
+	WORK_LOCATIONCITIZENSHIP varchar(100) default "Not Specified",
+	BRIDES_LOCATIONCOUNTRY varchar(100) default "Not Specified",
+	BRIDES_CURRENTCITIZENSHIP varchar(100) default "Not Specified",
+	PROFILEID int,
+    FOREIGN KEY (PROFILEID) REFERENCES users(PROFILEID)
+	ON DELETE CASCADE
+);
+---------------------------------------------------
+RegisterAbout
+---------------
+create table registerabout
+(
+	About_you varchar(500) default "Not Specified",
+    PROFILEID int,
+	FOREIGN KEY (PROFILEID) REFERENCES users(PROFILEID)
+	ON DELETE CASCADE
+);
+------------------------------------------------
+matches
+---------
+create table matches
+(
+	BODYTYPE varchar(20),
+	WEIGHT varchar(10),
+	COLLEGE varchar(50),
+	EATINGHABIT varchar(20),
+	DrinkingHabit varchar(15),
+	SmokingHabit varchar(15), 
+	Raasi varchar(20),
+	Time_of_Birth varchar(30),
+	Place_of_Birth varchar(100),
+	Father_Status varchar(20),
+	Mother_Status varchar(20),
+	Brothers varchar(10),
+	Sister varchar(10),
+	Parent_Contact_No varchar(10),
+	PROFILEID int,
+	FOREIGN KEY (PROFILEID) REFERENCES users(PROFILEID)
+	ON DELETE CASCADE
+);
+
+newimage
+----------
+create table newimage
+(
+	img1 blob,
+	img2 blob,
+	img3 blob,
+	PROFILEID int,
+	EMAILID varchar(50),
+	FOREIGN KEY (PROFILEID) REFERENCES users(PROFILEID)
+	ON DELETE CASCADE
+);
+Admin
+-------
+create table Admin
+(
+	email varchar(20),
+	password varchar(20)
+);
+insert into Admin values("Admin@gmail.com","Debasis");
