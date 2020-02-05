@@ -1,0 +1,137 @@
+#logo2 p {
+    float: left;
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: slateblue;
+    text-transform: capitalize;
+    display: initial;
+    margin: 0;
+    position: relative;
+    border: none;
+    padding: 0;
+}
+
+#logo2 p span {
+    color: red;
+    position: absolute;
+    font-size: 17px;
+    bottom: -43%;
+    right: -43%;
+}
+
+#logo2 p span span.line {
+    position: absolute;
+    content: '';
+    width: 90px;
+    height: 2px;
+    background: yellow;
+    right: 104%;
+    bottom: 48%;
+}
+
+#logodiv {
+	height: 90px;
+	margin: 5px;
+    box-shadow: 2px 4px 12px 6px rgb(230, 14, 183);
+}
+
+p.com {
+	color: mediumvioletred;
+	text-align: right;
+	top: 20px;
+}
+
+/* basic information */
+.basicinformation-form {
+    position: absolute;
+    left: 250px;
+}
+#recipient-name100{
+	margin-left: 50px;
+}
+.complit label{
+	font-weight: bold;
+}
+h5.life{
+	margin-left: 10px;
+}
+#recipient-name104{
+	margin: 5px;
+}
+#recipient-name105{
+	margin: 5px;
+}
+#recipient-name106{
+	margin: 5px;
+}
+.Horo{
+	margin-top: 5px;
+}
+.hrs{
+    width: 85px;
+    display: inline;
+}
+.min{
+    width: 85px;
+    display: inline;
+}
+.ampm{
+    width: 95px;
+    display: inline;
+}
+#logodiv a.skip{
+  color: red;
+  float: right;
+   margin-top: 38px;
+   margin-right: 56px;
+}
+/* responsive */
+@media all and (max-width:768px) {
+    p.com {
+        float: left;   
+    }
+
+    #logo2 p {
+        top: -10px;
+    }
+    #logodiv{
+        height: 140px;
+    }
+}
+@media all and (max-width:400px)
+{
+    p.com {
+        font-size: 15px;   
+    }
+    #logodiv{
+        height: 160px;
+    }
+}
+@media all and (max-width:337px)
+{
+    p.com {
+        font-size: 15px;   
+    }
+    #logodiv{
+        height: 160px;
+    }
+}
+@media all and (max-width:301px)
+{
+    #recipient-name100 {
+        margin-left: 50px;
+    }
+    input[type="radio"], input[type="checkbox"] {
+        box-sizing: border-box;
+        padding: 0;
+    }
+    button, input {
+        overflow: visible;
+    }
+    input, button, select, optgroup, textarea {
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+}
